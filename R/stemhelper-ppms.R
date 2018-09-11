@@ -544,7 +544,7 @@ compute_ppms <- function(path, st_extent = NA) {
   binom_test_p <- function(x) {
     binom.test(round(as.numeric(x["pat"]) * as.numeric(x["pi.es"]), 0),
                as.numeric(x["pi.es"]),
-               0.10,
+               (1 / 7),
                alternative = "greater")$p.value
   }
 
