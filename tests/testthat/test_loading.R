@@ -1,7 +1,7 @@
 context("Loading functions")
 context("stack_stem")
 
-test_that("stemhelper stack_stem default", {
+test_that("ebirdst stack_stem default", {
   root_path <- "~/Box Sync/Projects/2015_stem_hwf/documentation/data-raw/"
   species <- "woothr-ERD2016-SP_TEST-20180724-7ff34421"
   sp_path <- paste(root_path, species, sep = "")
@@ -41,7 +41,7 @@ test_that("stemhelper stack_stem default", {
                "RData file does not exist")
 })
 
-test_that("stemhelper stack_stem st_extent", {
+test_that("ebirdst stack_stem st_extent", {
   root_path <- "~/Box Sync/Projects/2015_stem_hwf/documentation/data-raw/"
   species <- "woothr-ERD2016-SP_TEST-20180724-7ff34421"
   sp_path <- paste(root_path, species, sep = "")
@@ -119,7 +119,7 @@ test_that("stemhelper stack_stem st_extent", {
 
 })
 
-test_that("stemhelper stack_stem w/ use_analysis_extent", {
+test_that("ebirdst stack_stem w/ use_analysis_extent", {
   root_path <- "~/Box Sync/Projects/2015_stem_hwf/documentation/data-raw/"
   species <- "woothr-ERD2016-SP_TEST-20180724-7ff34421"
   sp_path <- paste(root_path, species, sep = "")
@@ -142,7 +142,7 @@ test_that("stemhelper stack_stem w/ use_analysis_extent", {
 
 context("load_pis")
 
-test_that("stemhelper load_pis", {
+test_that("ebirdst load_pis", {
   root_path <- "~/Box Sync/Projects/2015_stem_hwf/documentation/data-raw/"
   species <- "woothr-ERD2016-SP_TEST-20180724-7ff34421"
   sp_path <- paste(root_path, species, sep = "")
