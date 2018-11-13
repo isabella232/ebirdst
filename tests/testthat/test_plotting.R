@@ -50,17 +50,17 @@ test_that("ebirdst plot_pis", {
 
   # checking return quality
   expect_equal(length(plot_pis(path = sp_path,
-                        pis = pis,
-                        st_extent = ne_extent,
-                        num_top_preds = 25,
-                        return_top = TRUE)),
+                               pis = pis,
+                               st_extent = ne_extent,
+                               num_top_preds = 25,
+                               return_top = TRUE)),
                25)
   expect_is(plot_pis(path = sp_path,
                      pis = pis,
                      st_extent = ne_extent,
                      num_top_preds = 25,
                      return_top = TRUE),
-               "character")
+            "character")
 
   # nothing to do
   expect_error(plot_pis(path = sp_path,
@@ -93,8 +93,8 @@ test_that("ebirdst plot_pis", {
                     lon.min = -80,
                     lon.max = -70)
   expect_error(plot_pis(path = sp_path,
-                     pis = pis,
-                     st_extent = ne_extent),
+                        pis = pis,
+                        st_extent = ne_extent),
                "Must provide t.min and t.max")
 
   # reversed min max
@@ -186,17 +186,17 @@ test_that("ebirdst plot_pds", {
                      st_extent = ne_extent,
                      plot_quantiles = TRUE), "list")
   expect_equal(length(plot_pds(pd_name = "EFFORT_HRS",
-                     pds = pds,
-                     st_extent = ne_extent,
-                     plot_quantiles = TRUE)), 2)
+                               pds = pds,
+                               st_extent = ne_extent,
+                               plot_quantiles = TRUE)), 2)
   expect_is(plot_pds(pd_name = "EFFORT_HRS",
                      pds = pds,
                      st_extent = ne_extent,
                      plot_quantiles = TRUE)$quantiles, "list")
   expect_equal(length(plot_pds(pd_name = "EFFORT_HRS",
-                     pds = pds,
-                     st_extent = ne_extent,
-                     plot_quantiles = TRUE)$quantiles), 2)
+                               pds = pds,
+                               st_extent = ne_extent,
+                               plot_quantiles = TRUE)$quantiles), 2)
   expect_is(plot_pds(pd_name = "EFFORT_HRS",
                      pds = pds,
                      st_extent = ne_extent,
